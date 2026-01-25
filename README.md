@@ -1,7 +1,7 @@
 이름 : KaraRun <br>
 장르 : 2d 횡스크롤 러너
 OS : Android  
-<br><br>
+<br>
 
 사용된 디자인 패턴 <br>
 1. Singleton (Manager)
