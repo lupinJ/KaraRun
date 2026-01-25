@@ -70,10 +70,15 @@ public class GameManager : Singleton<GameManager>
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     private void Start()
     {
         EventManager.Instance.OnPlayerDie += GameOver;
-        
+
         Score = 0;
         Coin = 0;
         Speed = 1;
@@ -164,6 +169,7 @@ public class GameManager : Singleton<GameManager>
     {
         if(scene.name == "GameScene")
         {
+            Debug.Log("GameScene »ý¼º");
             maps.Clear();
             player = GameObject.Find("kara").GetComponent<Player>();
             CreateMap(0, new Vector2(0.1f, 0f));

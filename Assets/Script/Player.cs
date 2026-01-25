@@ -149,6 +149,23 @@ public class Player : MonoBehaviour
         gameObject.GetComponent<BoxCollider2D>().enabled = !is_pause;
         rigid.gravityScale = is_pause ? 0f : 3f;
     }
+
+    public void PlayerJump()
+    {
+        if (jumpCount < jumpCountMax)
+            Jump();
+    }
+
+    public void PlayerLeanDown()
+    {
+        if (is_ground && !is_lean && !is_growth)
+            LeanDown();
+    }
+    public void PlayerLeanUp()
+    {
+        if (is_ground && !is_growth)
+            LeanUp();
+    }
     void Jump()
     {
         if (is_lean)

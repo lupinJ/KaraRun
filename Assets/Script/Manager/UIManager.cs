@@ -16,6 +16,7 @@ public class UIManager : Singleton<UIManager>
 
     private void Start()
     {
+        
         SaveData data = DataManager.Instance.Data;
         GetPanel("CoinDataUI").SetPanel<int>(data.coin);
         GetPanel("JewelDataUI").SetPanel<int>(data.jewel);
@@ -63,7 +64,7 @@ public class UIManager : Singleton<UIManager>
 
             if (!popupUIDictionary.ContainsKey(popupUI.name))
             {
-                Debug.Log($"{popupUI.name}");
+                //Debug.Log($"{popupUI.name}");
                 popupUIDictionary.Add(popupUI.name, popupUI); 
             }
             else
