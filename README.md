@@ -1,5 +1,5 @@
 이름 : KaraRun <br>
-장르 : 2d 횡스크롤 러너
+장르 : 2d 횡스크롤 러너 <br>
 OS : Android  
 <br>
 
@@ -9,4 +9,4 @@ OS : Android
 3. Object Pooling (SoundManager.cs) 
 
 추가 예정
-2. 코드를 리팩토링
+1. 코드를 리팩토링
